@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Rancho', cursive; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --charcoal: #264653;
-    --persiangreen: #2A9D8F;
-    --orangeyellow: #E9C46A;
-    --sandy: #F4A261;
-    --burnt: #E76F51
+  --charcoal: #264653;
+  --persiangreen: #2a9d8f;
+  --orangeyellow: #e9c46a;
+  --sandy: #f4a261;
+  --burnt: #e76f51;
 }
 
 body {
@@ -23,6 +22,48 @@ body {
   margin: 0;
   padding: 0;
   background: white;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 30px;
+}
+
+.logo {
+  color: sandybrown;
+  font-weight: 600;
+  font-size: 2rem;
+  text-shadow: 2px 2px black;
+}
+
+nav .nav-links ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav .nav-links ul li {
+  padding: 0 4px;
+  list-style: none;
+  font-size: 2rem;
+  text-shadow: 2px 2px black;
+  color: sandybrown;
+}
+
+nav .nav-links ul li img {
+  transform: scale(0.45);
+}
+
+li {
+  list-style: none;
+  padding-right: 15px;
+  color: sandybrown;
 }
 
 section {
@@ -37,58 +78,57 @@ section {
 
 section img {
   top: 0;
-  left: 0; 
+  left: 0;
   width: 110vw;
   height: 110vh;
   object-fit: cover;
   z-index: 1;
 }
 
-.text h1{
-    font-family: 'Poppins', sans-serif;
-    font-size: 8vw;
-    color: sandybrown;
-    letter-spacing: 12px;
-    position: absolute;
-    top: 25vh;
-    left: 33vw;
-    text-align: center;
-    text-shadow: 3px 4px black;
+.text h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 8vw;
+  color: sandybrown;
+  letter-spacing: 12px;
+  position: absolute;
+  top: 25vh;
+  left: 33vw;
+  text-align: center;
+  text-shadow: 3px 4px black;
 }
 
-.text p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 2vw;
-    color: sandybrown;
-    letter-spacing: 12px;
-    position: absolute;
-    top: 52vh;
-    left: 30vw;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    overflow: hidden;
-    white-space: nowrap;
+.text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 2vw;
+  color: sandybrown;
+  letter-spacing: 12px;
+  position: absolute;
+  top: 52vh;
+  left: 30vw;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-
-.text a{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-    color: var(--burnt);
-    letter-spacing: 2px;
-    position: absolute;
-    top: 63vh;
-    left: 45vw;
-    text-align: center;
-    display: inline-block;
-    padding: 8px 30px;
-    background: white;
-    font-style: 500;
-    border-radius: 40px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-decoration: none;
-    text-shadow: 1px 1px black;
+.text a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: var(--burnt);
+  letter-spacing: 2px;
+  position: absolute;
+  top: 63vh;
+  left: 45vw;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 30px;
+  background: white;
+  font-style: 500;
+  border-radius: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: solid;
+  text-shadow: 1px 1px black;
 }
 
 .plane {
@@ -102,35 +142,18 @@ section img {
   transform: rotate(20deg);
 }
 
-
-
-
-
-
-
 .center-fit {
-    max-width: 100%;
-    max-height: 100vh;
-    margin: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
 }
-
-#nav-bar {
-  float: right;
-}
-
-li {
-    list-style: none;
-    padding-right: 15px;
-}
-
 
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;  
-    display: flex;   
-    justify-content: space-between;     
-    display:flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
 }
-
