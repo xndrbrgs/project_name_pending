@@ -13,3 +13,12 @@
     max-height: 100vh;
     margin: auto;
 }
+
+#nav-bar {
+  float: right;
+}
+
+li {
+    list-style: none;
+    padding-right: 15px;
+}
