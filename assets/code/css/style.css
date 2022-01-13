@@ -170,16 +170,6 @@ button {
 
 
 #footer {
-
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;  
-    display: flex;   
-    justify-content: space-between;     
-}
-
-
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0));
   color: white;
   position: fixed;
@@ -192,4 +182,3 @@ button {
   padding: 10px 30px;
   font-size: 15px;
 }
- 4c8ea6ad497c533384112933c01f277fa29fe86b
