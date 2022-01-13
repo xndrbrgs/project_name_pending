@@ -148,21 +148,13 @@ section img {
   margin: auto;
 }
 
+
 #footer {
-<<<<<<< HEAD
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;  
     display: flex;   
     justify-content: space-between;     
-=======
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  display: flex;
->>>>>>> b15b852c569456b062cd36d4b83fb72e64fe96a5
 }
+
