@@ -131,6 +131,26 @@ section img {
   text-shadow: 1px 1px black;
 }
 
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: var(--burnt);
+  letter-spacing: 2px;
+  position: absolute;
+  top: 63vh;
+  left: 45vw;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 30px;
+  background: white;
+  font-style: 500;
+  border-radius: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: solid;
+  text-shadow: 1px 1px black;
+}
+
 .plane {
   height: auto;
   width: auto;
@@ -149,7 +169,7 @@ section img {
 }
 
 #footer {
-  background: black;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0));
   color: white;
   position: fixed;
   z-index: 100;
