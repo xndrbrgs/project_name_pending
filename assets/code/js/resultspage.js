@@ -1,4 +1,5 @@
 // VARIABLES
+let map;
 
 var city_names = [
   "Aberdeen",
@@ -391,7 +392,7 @@ var city_names = [
 var alexGMkey = "AIzaSyB5qaBxYy_INh2PTR1MqPiBOoO__2WRXYs";
 
 // FUNCTIONS
-getCityName();
+getCityName("Orlando");
 
 function getCityName(city) {
     let rando = city_names[Math.floor(Math.random() * city_names.length - 1)];
@@ -410,25 +411,48 @@ function getCityName(city) {
         let lat = city.results[0].geometry.location.lat;
         let long = city.results[0].geometry.location.lng;
 
-        console.log (
-            `Lat is ${lat}
-            Long is ${long}`
-        );
+        // console.log (
+        //     `Lat is ${lat}
+        //     Long is ${long}`
+        // );
 
-        // getPlaces();
+        let newCity = city.results[0].formatted_address;
+        $('#container').append(newCity);
+        initMap(lat, long);
+        getPlaces(lat, long);
     })
 }
 
-// const getPlaces = (lat, long) => {
-//     let placesUrl = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/output?json?location=" + lat + ',' + long + "&radius=5000&type=park&keyword=hiking&key=" + alexGMkey;
+const getPlaces = (lat, long) => {
+    let cors = "https://cors-anywhere.herokuapp.com/";
+    let placesUrl = cors + "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + ',' + long + "&radius=50000&type=park&keyword=hiking&key=" + alexGMkey;
+    fetch(placesUrl, {
+        method: 'GET',
+        datatype: 'jsonp',
+        headers: {}
+    })
 
-//     fetch(placesUrl, {
-//         method: 'GET',
-//         datatype: 'jsonp',
-//         headers: {}
-//     })
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data);
+        data.results.forEach(place => {
+      
+            new google.maps.Marker({
+              position: place.geometry.location,
+              map,
+              // icon: hiker, //If you add a custom icon you can add that here
+              title: place.name,
+            });
+    
+          });
+    })
+}
 
-//     .then(response => response.json())
-//     .then(city => {
-//         console.log(city);
-// }
+function initMap(lat, long) {
+    console.log(lat, long);
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 8,
+      center: {lat: lat, lng: long},
+    });
+  
+  }
