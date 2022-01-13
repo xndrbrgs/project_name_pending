@@ -48,12 +48,14 @@ nav .nav-links ul {
   flex-direction: row;
 }
 
-nav .nav-links ul li {
+nav .nav-links ul li a {
   padding: 0 4px;
   list-style: none;
   font-size: 2rem;
   text-shadow: 2px 2px black;
   color: sandybrown;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 nav .nav-links ul li img {
@@ -111,29 +113,33 @@ section img {
   white-space: nowrap;
 }
 
-.text a {
+.trip-button {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--burnt);
   letter-spacing: 2px;
-  position: absolute;
-  top: 63vh;
-  left: 45vw;
   text-align: center;
   display: inline-block;
   padding: 8px 30px;
   background: white;
+  margin-top: 20px;
   font-style: 500;
   border-radius: 40px;
+  border-style: solid;
   overflow: hidden;
   white-space: nowrap;
   text-decoration: solid;
   text-shadow: 1px 1px black;
+  transition: all 0.3s ease 0s;
 }
 
-button {
+.trip-button:hover {
+  background-color: var(--persiangreen);
+}
+
+.next-button a {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--burnt);
   letter-spacing: 2px;
   position: absolute;
@@ -145,10 +151,16 @@ button {
   background: white;
   font-style: 500;
   border-radius: 40px;
+  border-style: solid;
   overflow: hidden;
   white-space: nowrap;
   text-decoration: solid;
   text-shadow: 1px 1px black;
+  transition: all 0.3s ease 0s;
+}
+
+.next-button a:hover {
+  background-color: var(--persiangreen);
 }
 
 .plane {
@@ -168,7 +180,7 @@ button {
   margin: auto;
 }
 
-#footer {
+footer {
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0));
   color: white;
   position: fixed;
@@ -180,4 +192,12 @@ button {
   align-items: center;
   padding: 10px 30px;
   font-size: 15px;
+}
+
+footer p {
+  padding: 0 4px;
+  list-style: none;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px black;
+  color: sandybrown;
 }

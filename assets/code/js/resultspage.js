@@ -418,6 +418,9 @@ function getCityName(city) {
 
         let newCity = city.results[0].formatted_address;
         $('#container').append(newCity);
+
+        //local storage probably goes here
+
         initMap(lat, long);
         getPlaces(lat, long);
     })
@@ -425,7 +428,7 @@ function getCityName(city) {
 
 const getPlaces = (lat, long) => {
     let cors = "https://cors-anywhere.herokuapp.com/";
-    let placesUrl = cors + "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + ',' + long + "&radius=50000&type=park&keyword=hiking&key=" + alexGMkey;
+    let placesUrl = cors + "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + ',' + long + "&radius=50000&count=10&type=park&keyword=hiking&key=" + alexGMkey;
     fetch(placesUrl, {
         method: 'GET',
         datatype: 'jsonp',
@@ -445,6 +448,11 @@ const getPlaces = (lat, long) => {
             });
     
           });
+
+        data.results.forEach(place =>{
+            var parks = place.name;
+            $('#tester').append(parks);
+        })  
     })
 }
 
