@@ -131,6 +131,26 @@ section img {
   text-shadow: 1px 1px black;
 }
 
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: var(--burnt);
+  letter-spacing: 2px;
+  position: absolute;
+  top: 63vh;
+  left: 45vw;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 30px;
+  background: white;
+  font-style: 500;
+  border-radius: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: solid;
+  text-shadow: 1px 1px black;
+}
+
 .plane {
   height: auto;
   width: auto;
@@ -150,6 +170,7 @@ section img {
 
 
 #footer {
+
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -158,3 +179,17 @@ section img {
     justify-content: space-between;     
 }
 
+
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0));
+  color: white;
+  position: fixed;
+  z-index: 100;
+  bottom: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 15px;
+}
+ 4c8ea6ad497c533384112933c01f277fa29fe86b
