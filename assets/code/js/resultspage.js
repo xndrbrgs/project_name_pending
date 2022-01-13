@@ -388,7 +388,47 @@ var city_names = [
   "Youngstown",
 ];
 
-// FUNCTIONS
+var alexGMkey = "AIzaSyB5qaBxYy_INh2PTR1MqPiBOoO__2WRXYs";
 
-let rando = city_names[Math.floor(Math.random() * city_names.length - 1)];
-console.log(rando);
+// FUNCTIONS
+getCityName();
+
+function getCityName(city) {
+    let rando = city_names[Math.floor(Math.random() * city_names.length - 1)];
+    console.log(rando);
+
+    fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+ rando + "&key=" + alexGMkey, {
+        method: 'GET',
+        datatype: 'jsonp',
+        headers: {},
+    })
+
+    .then(response => response.json())
+    .then(city => {
+        console.log(city);
+
+        let lat = city.results[0].geometry.location.lat;
+        let long = city.results[0].geometry.location.lng;
+
+        console.log (
+            `Lat is ${lat}
+            Long is ${long}`
+        );
+
+        // getPlaces();
+    })
+}
+
+// const getPlaces = (lat, long) => {
+//     let placesUrl = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/output?json?location=" + lat + ',' + long + "&radius=5000&type=park&keyword=hiking&key=" + alexGMkey;
+
+//     fetch(placesUrl, {
+//         method: 'GET',
+//         datatype: 'jsonp',
+//         headers: {}
+//     })
+
+//     .then(response => response.json())
+//     .then(city => {
+//         console.log(city);
+// }
