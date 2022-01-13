@@ -2,9 +2,6 @@
     box-sizing: border-box;
   }
 
-header {
-
-}
   
 li {
     list-style: none;
@@ -46,7 +43,11 @@ li {
     text-align: center;
     background-color: #f1f1f1;
 }
-  
+
+#logo {
+    float: left;
+}
+
 @media screen and (max-width: 600px) {
     .column {
       width: 100%;
@@ -55,6 +56,3 @@ li {
     }
 }
 
-#logo {
-    float: left;
-}
