@@ -9,10 +9,11 @@
   </head>
   <body>
     <header class="row">
-      <nav id="nav-bar">
-        <i id="logo" placeholder="team logo"></i>
+      
+      <nav id="nav-bar"> <div class="logo">Explore.</div>
         <ul class="no-bullets">
           <li class="mytrips">
+            <a id="new-button" href="#">New Destination</a>
             <a href="#">My Trips</a>
           </li>
         </ul>
@@ -21,16 +22,20 @@
 
     <section id="city-name">
       <div id="container"></div>
-      <div id="map"></div>
-
+      <div id="map" class="map-bdr"></div>
+    </section>
+    <section>
       <div class="row">
         <div class="column">
+          <div class="card-header"> Things to Do!!!</div>
           <div class="card" id="placesofInterest"></div>
         </div>
         <div class="column">
+          <div class="card-header"> Places to Eat!!!</div>
           <div class="card" id="foodcard"></div>
         </div>
         <div class="column">
+          <div class="card-header"> Parks & Rec!!!</div>
           <div class="card" id="tester"></div>
         </div>
       </div>
@@ -54,7 +59,6 @@
           />
         </a>
       </p>
-
       <p>
         Rashad Anderson<br />
         <a href="https://github.com/randerson321">

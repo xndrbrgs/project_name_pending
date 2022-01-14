@@ -450,14 +450,14 @@ const getParks = (lat, long) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      data.results.forEach((place) => {
-        new google.maps.Marker({
-          position: place.geometry.location,
-          map,
-          // icon: hiker, //If you add a custom icon you can add that here
-          title: place.name,
-        });
-      });
+      // data.results.forEach((place) => {
+      //   new google.maps.Marker({
+      //     position: place.geometry.location,
+      //     map,
+      //     // icon: hiker, //If you add a custom icon you can add that here
+      //     title: place.name,
+      //   });
+      // });
 
       data.results.forEach((place) => {
         var parks = place.name;
@@ -551,3 +551,10 @@ function initMap(lat, long) {
     center: { lat: lat, lng: long },
   });
 }
+
+var newResults = document.getElementById("new-button")
+
+newResults.addEventListener("click", function () {
+    location.reload()
+  
+})
