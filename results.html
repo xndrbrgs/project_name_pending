@@ -4,43 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/code/css/results.css" />
     <title>Travel Results</title>
   </head>
   <body>
-    <header class="row">
-      
-      <nav id="nav-bar"> <div class="logo">Explore.</div>
-        <ul class="no-bullets">
-          <li class="mytrips">
-            <a id="new-button" href="#">New Destination</a>
-            <a href="#">My Trips</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <section id="city-name">
-      <div id="container"></div>
+  <header>
+      <nav>
+          <ul class="nav_links">
+              <li class="logo">Explore.</li>
+              <li><a id="new-button">New Destination</a></li>
+              <li><a href="#" id="new-button">My Trips</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <section id="city-name" class="new-city"></div>
+      <div id="container">
+        <!-- New Cities Show Up Here -->
+      </div>
       <div id="map" class="map-bdr"></div>
     </section>
+
     <section>
       <div class="row">
         <div class="column">
-          <div class="card-header"> Things to Do!!!</div>
+          <div class="card-head"> Things to Do!</div>
           <div class="card" id="placesofInterest"></div>
         </div>
         <div class="column">
-          <div class="card-header"> Places to Eat!!!</div>
+          <div class="card-head"> Places to Eat!</div>
           <div class="card" id="foodcard"></div>
         </div>
         <div class="column">
-          <div class="card-header"> Parks & Rec!!!</div>
+          <div class="card-head"> Parks & Rec!</div>
           <div class="card" id="tester"></div>
         </div>
       </div>
     </section>
-    <footer id="footer">
+    <!-- <footer id="footer">
       <p>
         Alex Borges<br />
         <i class="far fa-address-card"></i>
@@ -94,7 +97,7 @@
           />
         </a>
       </p>
-    </footer>
+    </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5qaBxYy_INh2PTR1MqPiBOoO__2WRXYs"

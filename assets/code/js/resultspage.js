@@ -459,9 +459,26 @@ const getParks = (lat, long) => {
       //   });
       // });
 
-      data.results.forEach((place) => {
-        var parks = place.name;
-        $("#tester").append(parks);
+      data.results.slice(0,10).forEach((place) => {
+        var name = place.name;
+        var rating = "Rating: " + place.rating + "/5";
+        var address = "Address: " + place.vicinity;
+        printResults();
+
+        function printResults() {
+          var resultCard = document.createElement('div');
+          resultCard.classList.add('card-header');
+          resultCard.append(name);
+          $("#tester").append(resultCard);
+          var cardContent = document.createElement('p');
+          cardContent.classList.add('card-content');
+          cardContent.append(rating);
+          $("#tester").append(cardContent);
+          var cardAddress = document.createElement('p');
+          cardAddress.classList.add('card-content');
+          cardAddress.append(address);
+          $("#tester").append(cardAddress);
+        }
       });
     });
 };
@@ -485,9 +502,26 @@ const getFood = (lat, long) => {
     .then((data) => {
       console.log(data);
 
-      data.results.forEach((place) => {
-        var foodPlaces = place.name;
-        $("#foodcard").append(foodPlaces);
+      data.results.slice(0,10).forEach((place) => {
+        var name = place.name;
+        var rating = "Rating: " + place.rating + "/5";
+        var address = "Address: " + place.vicinity;
+        printResults();
+
+        function printResults() {
+          var resultCard = document.createElement('div');
+          resultCard.classList.add('card-header');
+          resultCard.append(name);
+          $("#foodcard").append(resultCard);
+          var cardContent = document.createElement('p');
+          cardContent.classList.add('card-content');
+          cardContent.append(rating);
+          $("#foodcard").append(cardContent);
+          var cardAddress = document.createElement('p');
+          cardAddress.classList.add('card-content');
+          cardAddress.append(address);
+          $("#foodcard").append(cardAddress);
+        }
       });
     });
 };
@@ -511,9 +545,26 @@ const getPlaceOfInterest = (lat, long) => {
     .then((data) => {
       console.log(data);
 
-      data.results.forEach((place) => {
-        var placesOfInterest = place.name;
-        $("#placesofInterest").append(placesOfInterest);
+      data.results.slice(0,5).forEach((place) => {
+        var name = place.name;
+        var rating = "Rating: " + place.rating + "/5";
+        var address = "Address: " + place.vicinity;
+        printResults();
+
+        function printResults() {
+          var resultCard = document.createElement('div');
+          resultCard.classList.add('card-header');
+          resultCard.append(name);
+          $("#placesofInterest").append(resultCard);
+          var cardContent = document.createElement('p');
+          cardContent.classList.add('card-content');
+          cardContent.append(rating);
+          $("#placesofInterest").append(cardContent);
+          var cardAddress = document.createElement('p');
+          cardAddress.classList.add('card-content');
+          cardAddress.append(address);
+          $("#placesofInterest").append(cardAddress);
+        }
       });
     });
 };
@@ -537,9 +588,26 @@ const getAttractions = (lat, long) => {
     .then((data) => {
       console.log(data);
 
-      data.results.forEach((place) => {
-        var placesOfInterest = place.name;
-        $("#placesofInterest").append(placesOfInterest);
+      data.results.slice(0,10).forEach((place) => {
+        var name = place.name;
+        var rating = "Rating: " + place.rating + "/5";
+        var address = "Address: " + place.vicinity;
+        printResults();
+
+        function printResults() {
+          var resultCard = document.createElement('div');
+          resultCard.classList.add('card-header');
+          resultCard.append(name);
+          $("#placesofInterest").append(resultCard);
+          var cardContent = document.createElement('p');
+          cardContent.classList.add('card-content');
+          cardContent.append(rating);
+          $("#placesofInterest").append(cardContent);
+          var cardAddress = document.createElement('p');
+          cardAddress.classList.add('card-content');
+          cardAddress.append(address);
+          $("#placesofInterest").append(cardAddress);
+        }
       });
     });
 };
@@ -547,7 +615,7 @@ const getAttractions = (lat, long) => {
 function initMap(lat, long) {
   console.log(lat, long);
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
+    zoom: 10,
     center: { lat: lat, lng: long },
   });
 }

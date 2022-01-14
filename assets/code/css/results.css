@@ -1,9 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap");
+
 * {
-    box-sizing: border-box;
- }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --charcoal: #264653;
+  --persiangreen: #2a9d8f;
+  --orangeyellow: #e9c46a;
+  --sandy: #f4a261;
+  --burnt: #e76f51;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 22px;
+    color: #edf0f1;
+    text-decoration: none;
+}
 
 body {
-    background-color:  #2a9d8f;
+    background: var(--persiangreen);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: black;
+    min-height: 15vh;
+}
+
+.logo {
+    color: sandybrown;
+    font-weight: 600;
+    font-size: 2rem;
+    text-shadow: 2px 2px black;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #2a9d8f;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+#container {
+    text-align: center;
+    margin: 20px;
+    font-size: 3vw;
+    color: sandybrown;
+    font-weight: 600;
+    text-shadow: 2px 2px black;
 }
 
 .column {
@@ -30,9 +105,6 @@ body {
     background-color: #f1f1f1;
 }
 
-#logo {
-    float: left;
-}
 
 #map {
     height: 360px;
@@ -44,16 +116,29 @@ body {
     border: solid;
 }
 
-.card-header{
+.card-head {
+    color: sandybrown;
+    font-weight: 600;
+    font-size: 2rem;
+    text-shadow: 2px 2px black;
     text-align: center;
+    margin: 15px;
 }
 
-#city-name {
-    text-align: center;
-    font-size: xxx-large;
+.card-header {
+    margin: 20px;
+    font-size: 1.4vw;
+    color: var(--charcoal);
+    font-weight: 200;
 }
 
-nav {
+.card-content {
+    font-size: 1.1vw;
+    color: var(--charcoal);
+    font-weight: 200;
+}
+
+/* nav {
     position: fixed;
     z-index: 100;
     height: 10vh;
@@ -63,16 +148,9 @@ nav {
     align-items: center;
     padding: 10px 30px;
     font-size: 30px;
-}
+} */
   
-.logo {
-    color: sandybrown;
-    font-weight: 600;
-    font-size: 2rem;
-    text-shadow: 2px 2px black;
-}
-  
-nav .nav-links ul {
+/* nav .nav-links ul {
     display: flex;
     flex-direction: row;
 }
@@ -90,7 +168,7 @@ nav .nav-links ul li a {
 nav .nav-links ul li img {
     transform: scale(0.45);
 }
-  
+   */
 li {
     list-style: none;
     padding-right: 15px;
