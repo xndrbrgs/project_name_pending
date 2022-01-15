@@ -389,7 +389,8 @@ var city_names = [
 ];
 
 var alexGMkey = "AIzaSyB5qaBxYy_INh2PTR1MqPiBOoO__2WRXYs";
-var alexYelpkey = "U7X8vxnT2SfBqSh9v5o_Ub2WMO3ZPseF5Y2y7mJEHdAO6zh4qBpPAqtq5VuzfYZHbUfD4CxKqmH5x8RqXOVS715K7_u5RRI-ODietUafwxpezU6TzNXsDPYQRwXiYXYx";
+var alexYelpkey =
+  "U7X8vxnT2SfBqSh9v5o_Ub2WMO3ZPseF5Y2y7mJEHdAO6zh4qBpPAqtq5VuzfYZHbUfD4CxKqmH5x8RqXOVS715K7_u5RRI-ODietUafwxpezU6TzNXsDPYQRwXiYXYx";
 
 // FUNCTIONS
 getCityName("Orlando");
@@ -452,7 +453,7 @@ const getParks = (lat, long) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      data.results.slice(0,10).forEach((place) => {
+      data.results.slice(0, 10).forEach((place) => {
         new google.maps.Marker({
           position: place.geometry.location,
           map,
@@ -460,23 +461,23 @@ const getParks = (lat, long) => {
         });
       });
 
-      data.results.slice(0,10).forEach((place) => {
+      data.results.slice(0, 10).forEach((place) => {
         var name = place.name;
         var rating = "Rating: " + place.rating + "/5";
         var address = "Address: " + place.vicinity;
         printResults();
 
         function printResults() {
-          var resultCard = document.createElement('div');
-          resultCard.classList.add('card-header');
+          var resultCard = document.createElement("div");
+          resultCard.classList.add("card-header");
           resultCard.append(name);
           $("#tester").append(resultCard);
-          var cardContent = document.createElement('p');
-          cardContent.classList.add('card-internal');
+          var cardContent = document.createElement("p");
+          cardContent.classList.add("card-internal");
           cardContent.append(rating);
           $("#tester").append(cardContent);
-          var cardAddress = document.createElement('p');
-          cardAddress.classList.add('card-internal');
+          var cardAddress = document.createElement("p");
+          cardAddress.classList.add("card-internal");
           cardAddress.append(address);
           $("#tester").append(cardAddress);
         }
@@ -502,7 +503,7 @@ const getFood = (lat, long) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      data.results.slice(0,10).forEach((place) => {
+      data.results.slice(0, 10).forEach((place) => {
         new google.maps.Marker({
           position: place.geometry.location,
           map,
@@ -510,23 +511,23 @@ const getFood = (lat, long) => {
         });
       });
 
-      data.results.slice(0,10).forEach((place) => {
+      data.results.slice(0, 10).forEach((place) => {
         var name = place.name;
         var rating = "Rating: " + place.rating + "/5";
         var address = "Address: " + place.vicinity;
         printResults();
 
         function printResults() {
-          var resultCard = document.createElement('div');
-          resultCard.classList.add('card-header');
+          var resultCard = document.createElement("div");
+          resultCard.classList.add("card-header");
           resultCard.append(name);
           $("#foodcard").append(resultCard);
-          var cardContent = document.createElement('p');
-          cardContent.classList.add('card-internal');
+          var cardContent = document.createElement("p");
+          cardContent.classList.add("card-internal");
           cardContent.append(rating);
           $("#foodcard").append(cardContent);
-          var cardAddress = document.createElement('p');
-          cardAddress.classList.add('card-internal');
+          var cardAddress = document.createElement("p");
+          cardAddress.classList.add("card-internal");
           cardAddress.append(address);
           $("#foodcard").append(cardAddress);
         }
@@ -552,7 +553,7 @@ const getPlaceOfInterest = (lat, long) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      data.results.slice(0,10).forEach((place) => {
+      data.results.slice(0, 10).forEach((place) => {
         new google.maps.Marker({
           position: place.geometry.location,
           map,
@@ -560,23 +561,23 @@ const getPlaceOfInterest = (lat, long) => {
         });
       });
 
-      data.results.slice(0,5).forEach((place) => {
+      data.results.slice(0, 5).forEach((place) => {
         var name = place.name;
         var rating = "Rating: " + place.rating + "/5";
         var address = "Address: " + place.vicinity;
         printResults();
 
         function printResults() {
-          var resultCard = document.createElement('div');
-          resultCard.classList.add('card-header');
+          var resultCard = document.createElement("div");
+          resultCard.classList.add("card-header");
           resultCard.append(name);
           $("#placesofInterest").append(resultCard);
-          var cardContent = document.createElement('p');
-          cardContent.classList.add('card-internal');
+          var cardContent = document.createElement("p");
+          cardContent.classList.add("card-internal");
           cardContent.append(rating);
           $("#placesofInterest").append(cardContent);
-          var cardAddress = document.createElement('p');
-          cardAddress.classList.add('card-internal');
+          var cardAddress = document.createElement("p");
+          cardAddress.classList.add("card-internal");
           cardAddress.append(address);
           $("#placesofInterest").append(cardAddress);
         }
@@ -602,7 +603,7 @@ const getAttractions = (lat, long) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      data.results.slice(0,10).forEach((place) => {
+      data.results.slice(0, 10).forEach((place) => {
         new google.maps.Marker({
           position: place.geometry.location,
           map,
@@ -610,23 +611,23 @@ const getAttractions = (lat, long) => {
         });
       });
 
-      data.results.slice(0,8).forEach((place) => {
+      data.results.slice(0, 8).forEach((place) => {
         var name = place.name;
         var rating = "Rating: " + place.rating + "/5";
         var address = "Address: " + place.vicinity;
         printResults();
 
         function printResults() {
-          var resultCard = document.createElement('div');
-          resultCard.classList.add('card-header');
+          var resultCard = document.createElement("div");
+          resultCard.classList.add("card-header");
           resultCard.append(name);
           $("#placesofInterest").append(resultCard);
-          var cardContent = document.createElement('p');
-          cardContent.classList.add('card-internal');
+          var cardContent = document.createElement("p");
+          cardContent.classList.add("card-internal");
           cardContent.append(rating);
           $("#placesofInterest").append(cardContent);
-          var cardAddress = document.createElement('p');
-          cardAddress.classList.add('card-internal');
+          var cardAddress = document.createElement("p");
+          cardAddress.classList.add("card-internal");
           cardAddress.append(address);
           $("#placesofInterest").append(cardAddress);
         }
@@ -642,9 +643,8 @@ function initMap(lat, long) {
   });
 }
 
-var newResults = document.getElementById("new-button")
+var newResults = document.getElementById("new-button");
 
 newResults.addEventListener("click", function () {
-    location.reload()
-  
-})
+  location.reload();
+});
