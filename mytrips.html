@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/code/css/results.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/code/css/trips.css" />
     <title>My Trips</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul class="nav_links">
-                <li class="logo">Explore.</li>
-                <li><a href="./results.html" id="new-button" class="new-button">New Destination</a></li>
-                <li><a href="./mytrips.html" id="new-button" class="trips">My Trips</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="nav_links">
+          <li class="logo">Explore.</li>
+          <li>
+            <a href="./results.html" id="new-button" class="new-button"
+              >New Destination</a
+            >
+          </li>
+          <li>
+            <a id="clear-button" class="save-button">Clear Destinations</a>
+          </li>
+          <li>
+            <a href="./mytrips.html" id="new-button" class="trips">My Trips</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-</body>
+
+    <div id="container">
+      <h1>Saved Locations</h1>
+    </div>
+    <section class="card">
+      <div class="card-content card-heads">
+        <h1></h1>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div>
+        <p>Travelology 2022</p>
+        <p>Made with ❤️ by</p>
+        <p class="flexed">
+          <a href="https://github.com/xndrbrgs">Alex Borges</a>
+          <a href="https://github.com/randerson321">Rashad Anderson</a>
+          <a href="https://github.com/TrushaBH">Trusha Bharadwaj</a>
+        </p>
+      </div>
+    </footer>
+    <script src="./assets/code/js/resultspage.js"></script>
+  </body>
 </html>
