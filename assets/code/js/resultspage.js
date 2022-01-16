@@ -436,7 +436,7 @@ function getCityName(city) {
 }
 
 const getParks = (lat, long) => {
-  let cors = "https://cors-anywhere.herokuapp.com/";
+  let cors = "https://floating-headland-95050.herokuapp.com/";
   let placesUrl =
     cors +
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
@@ -463,7 +463,7 @@ const getParks = (lat, long) => {
 
       data.results.slice(0, 10).forEach((place) => {
         var name = place.name;
-        var rating = "Rating: " + place.rating + "/5";
+        var rating = "Rating: " + place.rating;
         var address = "Address: " + place.vicinity;
         printResults();
 
@@ -474,7 +474,7 @@ const getParks = (lat, long) => {
           $("#tester").append(resultCard);
           var cardContent = document.createElement("p");
           cardContent.classList.add("card-internal");
-          cardContent.append(rating);
+          cardContent.append(rating + "/5");
           $("#tester").append(cardContent);
           var cardAddress = document.createElement("p");
           cardAddress.classList.add("card-internal");
@@ -486,7 +486,7 @@ const getParks = (lat, long) => {
 };
 
 const getFood = (lat, long) => {
-  let cors = "https://cors-anywhere.herokuapp.com/";
+  let cors = "https://floating-headland-95050.herokuapp.com/";
   let placesUrl =
     cors +
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
@@ -513,7 +513,7 @@ const getFood = (lat, long) => {
 
       data.results.slice(0, 10).forEach((place) => {
         var name = place.name;
-        var rating = "Rating: " + place.rating + "/5";
+        var rating = "Rating: " + place.rating;
         var address = "Address: " + place.vicinity;
         printResults();
 
@@ -524,7 +524,7 @@ const getFood = (lat, long) => {
           $("#foodcard").append(resultCard);
           var cardContent = document.createElement("p");
           cardContent.classList.add("card-internal");
-          cardContent.append(rating);
+          cardContent.append(rating + "/5");
           $("#foodcard").append(cardContent);
           var cardAddress = document.createElement("p");
           cardAddress.classList.add("card-internal");
@@ -536,7 +536,7 @@ const getFood = (lat, long) => {
 };
 
 const getPlaceOfInterest = (lat, long) => {
-  let cors = "https://cors-anywhere.herokuapp.com/";
+  let cors = "https://floating-headland-95050.herokuapp.com/";
   let placesUrl =
     cors +
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
@@ -563,7 +563,7 @@ const getPlaceOfInterest = (lat, long) => {
 
       data.results.slice(0, 5).forEach((place) => {
         var name = place.name;
-        var rating = "Rating: " + place.rating + "/5";
+        var rating = "Rating: " + place.rating;
         var address = "Address: " + place.vicinity;
         printResults();
 
@@ -574,7 +574,7 @@ const getPlaceOfInterest = (lat, long) => {
           $("#placesofInterest").append(resultCard);
           var cardContent = document.createElement("p");
           cardContent.classList.add("card-internal");
-          cardContent.append(rating);
+          cardContent.append(rating + "/5");
           $("#placesofInterest").append(cardContent);
           var cardAddress = document.createElement("p");
           cardAddress.classList.add("card-internal");
@@ -586,7 +586,7 @@ const getPlaceOfInterest = (lat, long) => {
 };
 
 const getAttractions = (lat, long) => {
-  let cors = "https://cors-anywhere.herokuapp.com/";
+  let cors = "https://floating-headland-95050.herokuapp.com/";
   let placesUrl =
     cors +
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
@@ -613,7 +613,7 @@ const getAttractions = (lat, long) => {
 
       data.results.slice(0, 8).forEach((place) => {
         var name = place.name;
-        var rating = "Rating: " + place.rating + "/5";
+        var rating = "Rating: " + place.rating;
         var address = "Address: " + place.vicinity;
         printResults();
 
@@ -624,7 +624,7 @@ const getAttractions = (lat, long) => {
           $("#placesofInterest").append(resultCard);
           var cardContent = document.createElement("p");
           cardContent.classList.add("card-internal");
-          cardContent.append(rating);
+          cardContent.append(rating + "/5");
           $("#placesofInterest").append(cardContent);
           var cardAddress = document.createElement("p");
           cardAddress.classList.add("card-internal");
@@ -648,3 +648,4 @@ var newResults = document.getElementById("new-button");
 newResults.addEventListener("click", function () {
   location.reload();
 });
+
