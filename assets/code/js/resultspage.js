@@ -442,6 +442,8 @@ function getCityName(city) {
 
         citiesList.push(newCitiesSaved);
         localStorage.setItem("saved-cities", JSON.stringify(citiesList));
+        var checkMark = document.getElementById("checkmark");
+        checkMark.classList.remove("hide");
       }
     });
 }
