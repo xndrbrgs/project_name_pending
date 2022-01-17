@@ -1,4 +1,3 @@
-
 function retrieveCities () {
     var scoresList = JSON.parse(window.localStorage.getItem("saved-cities")) || [];
 
