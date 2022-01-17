@@ -127,8 +127,8 @@ section img {
   color: sandybrown;
   letter-spacing: 12px;
   position: absolute;
-  top: 52vh;
-  left: 30vw;
+  top: 55vh;
+  left: 20vw;
   text-align: center;
   text-shadow: 2px 2px black;
   overflow: hidden;
@@ -165,8 +165,8 @@ section img {
   color: var(--burnt);
   letter-spacing: 2px;
   position: absolute;
-  top: 63vh;
-  left: 50%;
+  top: 62vh;
+  left: 45%;
   text-align: center;
   display: inline-block;
   padding: 8px 30px;
