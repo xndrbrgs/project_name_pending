@@ -22,7 +22,7 @@
             >
           </li>
           <li>
-            <a id="clear-button" class="save-button">Clear Destinations</a>
+            <button id="clear-button" class="save-button">Clear Destinations</button>
           </li>
           <li>
             <a href="./mytrips.html" id="new-button" class="trips">My Trips</a>
@@ -31,12 +31,13 @@
       </nav>
     </header>
 
-    <div id="container">
+    <div id="containers">
       <h1>Saved Locations</h1>
     </div>
     <section class="card">
       <div class="card-content card-heads">
-        <h1>Orlando, FL , USA</h1>
+        <ul id="cities">
+        </ul>
       </div>
     </section>
 
@@ -51,6 +52,7 @@
         </p>
       </div>
     </footer>
-    <script src="./assets/code/js/resultspage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/code/js/trips.js"></script>
   </body>
 </html>

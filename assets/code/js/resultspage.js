@@ -425,13 +425,24 @@ function getCityName(city) {
       let newCity = city.results[0].formatted_address;
       $("#container").append(newCity);
 
-      //local storage probably goes here
-
       initMap(lat, long);
       getParks(lat, long);
       getFood(lat, long);
       getPlaceOfInterest(lat, long);
       getAttractions(lat, long);
+
+      document.getElementById("save-button").onclick = savedCities;
+
+      function savedCities() {
+        console.log("Saving City...");
+        var citiesList = JSON.parse(window.localStorage.getItem("saved-cities")) || [];
+        var newCitiesSaved = {
+          city: newCity,
+        };
+
+        citiesList.push(newCitiesSaved);
+        localStorage.setItem("saved-cities", JSON.stringify(citiesList));
+      }
     });
 }
 
@@ -648,4 +659,3 @@ var newResults = document.getElementById("new-button");
 newResults.addEventListener("click", function () {
   location.reload();
 });
-

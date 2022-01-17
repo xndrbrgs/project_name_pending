@@ -105,6 +105,7 @@ header {
   cursor: pointer;
   transition: all 0.3s ease 0s;
   color: black;
+  font-family: "Poppins", sans-serif;
 }
 
 .save-button:hover {
@@ -209,6 +210,10 @@ footer {
   align-items: center;
   transition: all 0.3s ease 0s;
   font-size: 1.3rem;
+}
+
+#hide {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
